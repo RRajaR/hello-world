@@ -1,0 +1,57 @@
+Git Workflow
+
+1) git init
+Working directory
+
+2) git add
+Staging Area (files are ready to commit)
+
+3)git commit
+Repository
+
+-------------------------------------------
+
+git init
+git status
+git add
+git diff
+git commit -m ""
+git log  (SHA 40 char long)
+
+---------------------------------------------
+BACKTRACK
+
+git checkout HEAD
+git reset HEAD 
+git reset commit_SHA(first five letters of SHA)
+git add filename1 filename2
+
+------------------------------------------------
+BRANCHING
+
+git branch
+git branch branch-name(create branch)
+git checkout branch-name(switching branches)
+git merge branch-name
+git branch -d branch-name(delete branch)
+
+merge conflict (commit master before you merge
+
+----------------------------------------------------
+GIT WORKFLOW
+Now that you've merged origin/master into your local master branch, you're ready to contribute some work of your own. The workflow for Git collaborations typically follows this order:
+
+Fetch and merge changes from the remote
+Create a branch to work on a new project feature
+Develop the feature on your branch and commit your work
+Fetch and merge from the remote again (in case new commits were made while you were working)
+Push your branch up to the remote for review
+Steps 1 and 4 are a safeguard against merge conflicts, which occur when two branches contain file changes that cannot be merged with the git merge command. Step 5 involves git push, a command you will learn in the next exercise.
+------------------------------------------------------------------------------------------
+GIT TEAMWORK
+
+git clone   (Creates a local copy of a remote)
+git remote -v  (Lists a Git project's remotes)
+git fetch   (Fetches work from the remote into the local copy.)
+git merge origin/master
+git push origin branch-name
